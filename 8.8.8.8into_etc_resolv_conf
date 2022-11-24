@@ -3,6 +3,7 @@ while i have been trying to add 8.8.8.8 to dns resolve config for a while and wh
 
 so in china, the dns server they provide is only by default the home router and of course it is so hard to look for useful English contents and doc. It just can't basically resolve the domain name into corrent ip address. so i think about google dns server 8.8.8.8. the problem is i have to manually add it everytime i boot my pc (because /etc/resolv.conf is refreshed by network manger daemon, every time pc is booted it is a new file). so i think about a solution or create a script to facilitate that process.
 
+
 I create a dns.sh to do that
 
 ```
@@ -10,6 +11,7 @@ I create a dns.sh to do that
 
 sudo sh -c "echo nameserver 8.8.8.8 >> /etc/resolv.conf"
 ```
+
 
 remember to edit the sudoers file to disable entering password for sudo and add user into sudoer.
 it is much easier now as i opened terminal then only type ./dns.sh and it does it for me
