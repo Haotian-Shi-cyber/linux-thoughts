@@ -1,0 +1,14 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp1s0:
+      dhcp4: no
+      addresses: [45.77.5.49/23,45.77.1.12/32,'2001:19f0:ac01:1adb:5400:04ff:fe11:8dd5/64']
+      gateway4: 45.77.4.1
+      nameservers:
+        addresses: [108.61.10.10]
+      routes:
+      - to: 169.254.0.0/16
+        via: 45.77.4.1
+        metric: 100
